@@ -8,8 +8,7 @@ function noteMake2(dborform, color) {
   dborform = dborform || {};
   $("<div>").attr("id", "note" + noteCount).addClass("box").addClass(setColor).addClass("quote-container")
   .appendTo("main");
-
-  $("<h5>").text("Aspiration").appendTo("#" + noteId);
+  $("<h5>").text(dborform.ambition || "Aspiration").appendTo("#" + noteId);
   $("<form>").addClass("activity").attr("id", "noteform" + noteCount).appendTo("#" + noteId);
   $('<input type="text">').val(dborform.ambition || "Enter Text")
   .addClass(color).addClass("activity").appendTo("#" + noteFormId);
